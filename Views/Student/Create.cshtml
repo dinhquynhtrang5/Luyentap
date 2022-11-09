@@ -1,0 +1,27 @@
+﻿@model Luyentap.Models.Student
+<h1>Tạo mới một sinh viên</h1>
+<hr>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="StudentID" class="control-label"></label>
+                <input asp-for="StudentID" class="form-control">
+                <span asp-validation-for="StudentID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StudentName" class="control-label"></label>
+                <input asp-for="StudentName" class="form-control">
+                <span asp-validation-for="StudentName" class="text-danger"></span>
+            </div>
+            <br>
+            <div class="form-group">
+                <input class="btn btn-primary" type="submit" value="Save">
+                <a class="btn btn-success" asp-action="Index">Danh sách Sinh viên</a>
+            </div>
+        </form>
+
+    </div>
+
+</div>
